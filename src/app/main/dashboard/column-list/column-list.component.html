@@ -1,0 +1,31 @@
+<!-- <div class="col-sm-6 col-md-4"> -->
+
+    <div class="card bg-light m-2 " style="width: 300px;" *ngIf="column">
+        <div class="card-body"  >
+            <h3 class="card-title text-uppercase text-truncate py-2">{{ column.name }}</h3>
+            <div class="items border  border-light"  *ngFor="let task of taskList" >
+                <div class="card draggable shadow-sm" id="cd1" draggable="true" >
+                    <!-- <div class="card draggable shadow-sm" id="cd1" draggable="true" ondragstart="drag(event)"> -->
+                    <div class="card-body p-2 main-context-card" (contextmenu)="onRightClick($event,task)">
+                        <div class="card-title">
+                            <!-- <button class="rounded-circle float-right menu" (contextmenu)="onRightClick($event,task)"></button> -->
+                            <img src="//placehold.it/30" class="rounded-circle float-right menu" >
+                            <a href="" class="lead font-weight-light">{{ task.ticketNumber }}</a>
+                            <div *ngIf="isContextMenuShow && (selectedTask.ticketNumber == task.ticketNumber)" appClickOutside (clickOutside)="clickOutside($event)">
+                                <app-context-menu   [x]="contextmenuX" [y]="contextmenuY" (remove)="onMenuChange($event)"></app-context-menu>
+                            </div>
+                        </div>
+                        <p>
+                           {{ task.taskDesc }}
+                        </p>
+                        <button class="btn btn-primary btn-sm">View</button>
+                    </div>
+                </div>
+                <div class="dropzone rounded"> &nbsp; </div>
+                <!-- <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)"
+                    ondragleave="clearDrop(event)"> &nbsp; </div> -->
+
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->

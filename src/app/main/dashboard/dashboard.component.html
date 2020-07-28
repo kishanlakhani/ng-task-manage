@@ -1,0 +1,10 @@
+<div class="container-fluid pt-3">
+    <h3 class="font-weight-light text-dark">Kanban Board
+    <button class="btn btn-primary float-right">Add column</button></h3>
+    <!-- <div class="small  text-dark">Drag and drop between swim lanes</div> -->
+    <div class="row flex-row flex-sm-nowrap d-flex flex-nowrap ">
+        <!-- <div class="col-sm-6 col-md-4 col-xl-3"> -->
+            <app-column-list *ngFor="let column of columnList" [column]="column" (removeTask) = "removeTask($event)" [taskList]="onFilterTask(column)"></app-column-list>
+        <!-- </div> -->
+    </div>
+</div>
