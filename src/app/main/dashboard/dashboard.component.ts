@@ -13,22 +13,22 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.columnList = [
-      { id: 1, name: 'TO DO' },
-      { id: 2, name: 'IN-PROGRESS' },
-      { id: 3, name: 'REVIEW' },
-      { id: 4, name: 'COMPLETE' }
-    ];
+    // this.columnList = [
+    //   { id: 1, name: 'TO DO' },
+    //   { id: 2, name: 'IN-PROGRESS' },
+    //   { id: 3, name: 'REVIEW' },
+    //   { id: 4, name: 'COMPLETE' }
+    // ];
 
-    this.taskList = [
-      { id: 1, columnId: 1, ticketNumber: 'TSK-001', taskDesc: 'This is a description of a item on the board one.' },
-      { id: 2, columnId: 2, ticketNumber: 'TSK-002', taskDesc: 'This is a description of a item on the board two.' },
-      { id: 3, columnId: 3, ticketNumber: 'TSK-003', taskDesc: 'This is a description of a item on the board three.' },
-      { id: 4, columnId: 4, ticketNumber: 'TSK-004', taskDesc: 'This is a description of a item on the board four.' },
-      { id: 5, columnId: 1, ticketNumber: 'TSK-005', taskDesc: 'This is a description of a item on the board five.' },
-      { id: 6, columnId: 1, ticketNumber: 'TSK-005', taskDesc: 'This is a description of a item on the board five.' },
-      { id: 7, columnId: 1, ticketNumber: 'TSK-005', taskDesc: 'This is a description of a item on the board five.' },
-    ];
+    // this.taskList = [
+    //   { id: 1, columnId: 1, ticketNumber: 'TSK-001', taskDesc: 'This is a description of a item on the board one.' },
+    //   { id: 2, columnId: 2, ticketNumber: 'TSK-002', taskDesc: 'This is a description of a item on the board two.' },
+    //   { id: 3, columnId: 3, ticketNumber: 'TSK-003', taskDesc: 'This is a description of a item on the board three.' },
+    //   { id: 4, columnId: 4, ticketNumber: 'TSK-004', taskDesc: 'This is a description of a item on the board four.' },
+    //   { id: 5, columnId: 1, ticketNumber: 'TSK-005', taskDesc: 'This is a description of a item on the board five.' },
+    //   { id: 6, columnId: 1, ticketNumber: 'TSK-006', taskDesc: 'This is a description of a item on the board five.' },
+    //   { id: 7, columnId: 1, ticketNumber: 'TSK-007', taskDesc: 'This is a description of a item on the board five.' },
+    // ];
   }
 
   public onFilterTask(column: IColumn): Array<ITask> {
